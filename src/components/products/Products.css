@@ -1,0 +1,9 @@
+.Product img {
+    width: 75%;
+}
+.Product .underline {
+    text-decoration: none;
+    display: block;
+    color: black
+    
+}
