@@ -47,17 +47,19 @@ const Navbar = ({currentUser}) => {
                     <input class="form-control mx-2" type="search" placeholder="Search" aria-label="Search"/>
                     <i class="fas fa-search fa-2x" type="submit"></i>
                 </form>
+               
                 {
                     currentUser ?
-                    <button class="btn mx-5 btn-lg nav-link" onClick={() => auth.signOut()}>
-                    LogOut
-                    </button>
+                    <div class="btn mx-5 btn-lg nav-link" onClick={() => auth.signOut()}>
+                    SignOut
+                    </div>
                     :
-                    <button class="btn mx-5 btn-lg" >
-                    <NavLink to="/botani/signin" className="nav-link">LogIn</NavLink>
-                    </button>
+                    <div class="btn mx-5 btn-lg" >
+                    <Link to="/botani/signin" className="nav-link">SignIn</Link>
+                    </div>
                     
                 }
+               
             </nav>
         )
     

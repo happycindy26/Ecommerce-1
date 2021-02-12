@@ -7,7 +7,7 @@ import Products from './components/products/Products';
 import ProductsDetails from './components/products/ProductsDetails';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-import Login from './components/login/Login';
+import SigninSignup from './components/signinSignup/SigninSignup';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import './App.css';
 
@@ -22,10 +22,20 @@ class App extends Component {
   unsubscribeFromAuth = null
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({currentUser: user});
-      //createUserProfileDocument(user);
-      
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot(snapShot => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          })
+        })
+      }
+      this.setState({currentUser: userAuth});
     })
   }
   componentWillUnmount() {
@@ -42,7 +52,7 @@ class App extends Component {
           <Route exact path="/botani/products" render={() => <Products />} />
           <Route exact path="/botani/products/:name" render={() => <ProductsDetails />} />
           <Route exact path="/botani/contact" render={() => <Contact />} />
-          <Route exact path="/botani/signin" render={() => <Login />} />
+          <Route exact path="/botani/signin" render={() => <SigninSignup />} />
         </Switch>
         <Footer />
       </div>
