@@ -41,29 +41,29 @@ class Signup extends Component {
         return (
             <div className="my-4 mx-5">
                 <h3>I do not have an account</h3>
-                <span>Sign up with your email</span>
+                <span>Sign up</span>
                 <form onSubmit={this.handleSubmit}>
-                    <div className="my-4">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Name</label>
-                        <input name="displayName" type="text" className="form-control" id="exampleInput" 
+                    <div className="my-2">
+                        <label htmlFor="exampleInputEmail1" className="form-label"></label>
+                        <input name="displayName" type="text" placeholder="Name" className="form-control" id="exampleInput" 
                             value={this.state.displayName} onChange={this.handleChange} required/>
                     </div>
-                    <div className="my-4">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
-                        <input name="email" type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <div className="my-2">
+                        <label htmlFor="exampleInputEmail1" className="form-label"></label>
+                        <input name="email" type="email" placeholder="Email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                             value={this.state.email} onChange={this.handleChange} required/>
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                        <input name="password" type="password" className="form-control" id="exampleInputPassword1"
+                    <div className="my-2">
+                        <label htmlFor="exampleInputPassword1" className="form-label"></label>
+                        <input name="password" type="password" Placeholder="Password" className="form-control" id="exampleInputPassword1"
                         value={this.state.password} onChange={this.handleChange} />
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputConfirmPassword1" className="form-label">Confirm Password</label>
-                        <input name="confirmPassword" type="password" className="form-control" id="exampleInputConfirmPassword1"
+                    <div className="my-2">
+                        <label htmlFor="exampleInputConfirmPassword1" className="form-label"></label>
+                        <input name="confirmPassword" type="password" placeholder="Confirm Password" className="form-control" id="exampleInputConfirmPassword1"
                         value={this.state.confirmPassword} onChange={this.handleChange} />
                     </div>
-                    <button type="submit" className="btn btn-outline-dark px-5 mt-3">Sign Up</button>
+                    <button type="submit" className="btn btn-outline-dark px-5 mt-2">Sign Up</button>
                 </form>
             </div>
         )

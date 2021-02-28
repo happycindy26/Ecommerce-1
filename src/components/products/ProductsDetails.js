@@ -6,12 +6,7 @@ import Products from './Products';
 
 
 class ProductsDetails extends Component {
-    constructor(props) {
-        super(props);
-        
-    }
    
-
     render() {
         
        

@@ -32,7 +32,7 @@ class Signin extends Component {
         return (
             <div className="my-4 mx-5">
                 <h3>I already have an account</h3>
-                <span>Sign in with your email</span>
+                <span>Sign in with your email and password</span>
                 <form onSubmit={this.handleSubmit}>
                     <div className="my-4">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email</label>

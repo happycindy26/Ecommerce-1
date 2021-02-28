@@ -2,7 +2,7 @@ import React from 'react';
 //import GoogleMap from '../googlemap/GoogleMap';
 import './Contact.css';
 
-const Contact = ({}) => {
+const Contact = () => {
         return (
             <div className="Contact my-5">
                 <div >
