@@ -1,0 +1,8 @@
+.About {
+    height: 70vh; 
+}
+.intro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
