@@ -1,20 +1,17 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import ProductsData from './Products.data';
-import ProductsDetails from './ProductsDetails';
+import {getProducts} from './ProductsData';
 import './Products.css';
 
 class Products extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            products: ProductsData
-        }
-        
+            products: getProducts()
+        };
     }
     
     render() {
-        
         return (
             <div className="Products my-5">
                 <h3 className="text-center my-5">Best Sellers</h3>

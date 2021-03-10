@@ -43,11 +43,7 @@ const Navbar = ({currentUser}) => {
                         </li>
                     </ul>
                 </div>
-                <form class="d-flex">
-                    <input class="form-control mx-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <i class="fas fa-search fa-2x" type="submit"></i>
-                </form>
-               
+                
                 {
                     currentUser ?
                     <div class="btn mx-5 btn-lg nav-link" onClick={() => auth.signOut()}>
@@ -66,3 +62,10 @@ const Navbar = ({currentUser}) => {
 }
 
 export default Navbar;
+
+/*
+<form class="d-flex">
+                    <input class="form-control mx-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <i class="fas fa-search fa-2x" type="submit"></i>
+                </form>
+               */

@@ -46,14 +46,14 @@ class App extends Component {
       <div>
         <Navbar currentUser={this.state.currentUser} />
         <Switch>
-          <Route exact path="/" render={() => <Home />} />
-          <Route exact path="/botani" render={() => <Home />} />
-          <Route exact path="/botani/home" render={() => <Home />} />
-          <Route exact path="/botani/about" render={() => <About />} />
-          <Route exact path="/botani/products" render={() => <Products />} />
-          <Route exact path="/botani/products/:name" render={() => <ProductsDetails />} />
-          <Route exact path="/botani/contact" render={() => <Contact />} />
-          <Route exact path="/botani/signin" render={() => <SigninSignup />} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/botani" component={Home}/>
+          <Route exact path="/botani/home" component={Home}/>
+          <Route exact path="/botani/about" component={About} />
+          <Route exact path="/botani/products" component={Products} />
+          <Route exact path="/botani/products/:name" component={ProductsDetails}/>
+          <Route exact path="/botani/contact" component={Contact} />
+          <Route exact path="/botani/signin" component={SigninSignup} />
         </Switch>
         <Footer />
       </div>
