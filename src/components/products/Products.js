@@ -18,7 +18,7 @@ class Products extends Component {
                 <div className="container">
                     <div className="row">
                         {this.state.products.map(product => (
-                            <div className="Product col-md-4 text-center" key={product.name} >
+                            <div className="Product col-md-6 col-lg-4 text-center" key={product.name} >
                                 <Link to={`./products/${product.name}`} >
                                 <img src={product.src} alt={product.name}/>
                                 </Link>
