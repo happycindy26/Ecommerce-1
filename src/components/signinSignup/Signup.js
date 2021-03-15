@@ -39,9 +39,9 @@ class Signup extends Component {
     }
     render() {
         return (
-            <div className="my-4 mx-5">
-                <h3>I do not have an account</h3>
-                <span>Sign up</span>
+            <div className="my-4 mx-3">
+                <h5>I do not have an account -- Sign Up</h5>
+                
                 <form onSubmit={this.handleSubmit}>
                     <div className="my-2">
                         <label htmlFor="exampleInputEmail1" className="form-label"></label>

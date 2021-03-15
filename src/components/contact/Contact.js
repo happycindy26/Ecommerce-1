@@ -4,39 +4,30 @@ import './Contact.css';
 
 const Contact = () => {
         return (
-            <div className="Contact my-5">
-                <div >
-                    <h3>Contact Us</h3>
-                    <p>Phone: 03 93808059</p>
-                    <p>Address: 15 Irene Ave, North Coburg VIC 3058</p>
-                    <div>
-                    GoogleMap 
-                    
+            <div>
+                <h3 className="text-center mt-5">Send an Enquiry</h3>
+                <form class="row mx-3 my-5 justify-content-center">
+                    <div class="col-11 col-lg-8">
+                        <label for="inputName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="inputName"/>
                     </div>
-                </div>
-            
-                <div>
-                    <h3>Send an Enquiry</h3>
-                    <form className="form">
-                        
-                        <label></label>
-                        <div class="mb-3">
-                            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Name" />
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Phone" />
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" />
-                        </div>
-                        <div className="mb-3 textarea">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" cols="20" placeholder="Textarea"></textarea>
-                        </div>
-                        <button type="submit" className="btn btn-outline-dark px-5 mt-3" >Send</button>
-                    </form>
-                </div>
+                    <div class="col-11 col-lg-8">
+                        <label for="inputPhone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="inputPhone"/>
+                    </div>
+                    <div class="col-11 col-lg-8">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4"/>
+                    </div>
+                    <div class="col-11 col-lg-8">
+                        <label for="inputMessage" class="form-label">Message</label>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <div class="col-11 col-lg-8 mt-3">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form> 
             </div>
-           
         )
     }
 

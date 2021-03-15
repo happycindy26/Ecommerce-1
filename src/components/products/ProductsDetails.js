@@ -25,7 +25,7 @@ class ProductsDetails extends Component {
                         </div>  
                     </div>
                 <div className="row">
-                    <div>
+                    <div className="mx-3">
                         <h4>Deccription:</h4>
                         <p>{currentProduct.description}</p>
                         <h4>Ingredients:</h4>
