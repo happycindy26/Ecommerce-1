@@ -4,10 +4,10 @@ import {getProduct} from './ProductsData';
 //import './ProductsDetails.css';
 
 class ProductsDetails extends Component {
-  
     render() {
         const name = this.props.match.params.name;
         const currentProduct = getProduct(name);
+    
         return (
             <div className="container">
                 <div className="ProductsDetails row justify-content-center align-items-center ">
@@ -16,8 +16,8 @@ class ProductsDetails extends Component {
                         </div>
                         <div className="col-6 text-center">
                             <h4 >{currentProduct.name}</h4>
-                            <h4 >${currentProduct.price}</h4>    
-                            <input type="number" max="20" min="0" />
+                            <h4 >${currentProduct.price}</h4>  
+                            <input type="number" max="20" min="1" />
                             <div class="w-100"></div>
                             <Link to={`./${currentProduct.name}/addtocart`} className="btn btn-primary my-5">
                                 ADD TO CART    
@@ -25,7 +25,7 @@ class ProductsDetails extends Component {
                         </div>  
                     </div>
                 <div className="row">
-                    <div className="mx-3">
+                    <div className="mx-3 mb-5">
                         <h4>Deccription:</h4>
                         <p>{currentProduct.description}</p>
                         <h4>Ingredients:</h4>

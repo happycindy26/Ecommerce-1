@@ -13,9 +13,6 @@ class Footer extends Component {
                         <a class="nav-link active" href="https://www.twitter.com"><i class="fab fa-twitter-square">Twitter</i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="https://www.linkedin.com"><i class="fab fa-linkedin">LinkedIn</i></a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link active" href="https://www.youtube.com"><i class="fab fa-youtube-square">Youtube</i></a>
                     </li>
                     <li class="nav-item">

@@ -54,6 +54,7 @@ class App extends Component {
           <Route exact path="/botani/products/:name" component={ProductsDetails}/>
           <Route exact path="/botani/contact" component={Contact} />
           <Route exact path="/botani/signin" component={SigninSignup} />
+  
         </Switch>
         <Footer />
       </div>

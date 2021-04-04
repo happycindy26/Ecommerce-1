@@ -2,7 +2,9 @@ import React from 'react';
 import {NavLink, Link} from 'react-router-dom';
 import {auth} from '../../firebase/firebase.utils';
 import logo from '../../images/botani_logo.png';
+import CartIcon from '../cart/Cart';
 import './Navbar.css';
+
 
 const Navbar = ({currentUser}) => {
         return (
@@ -46,16 +48,16 @@ const Navbar = ({currentUser}) => {
                 
                 {
                     currentUser ?
-                    <div class="btn mx-5 btn-lg nav-link" onClick={() => auth.signOut()}>
+                    <div class="btn btn-lg nav-link" onClick={() => auth.signOut()}>
                     SignOut
                     </div>
                     :
-                    <div class="btn mx-5 btn-lg" >
+                    <div class="btn btn-lg" >
                     <Link to="/botani/signin" className="nav-link">SignIn</Link>
                     </div>
                     
                 }
-               
+                <CartIcon />
             </nav>
         )
     

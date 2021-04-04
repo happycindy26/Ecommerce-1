@@ -8,7 +8,7 @@ class Home extends Component {
         return (
             <div class="card text-black text-left">
                 <img src={homeImg} class="card-img" alt="skin care"/>
-                <div class="card-img-overlay ml-5 mt-5">
+                <div class="card-img-overlay ml-2 mt-5">
                     <h3 className="">Organic, Vegan Skincare Products Australia</h3>
                     <NavLink to="/botani/products">
                         <button type="button" className="btn btn-success my-4">SHOP NOW</button>

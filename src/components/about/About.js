@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {ReactPlayer} from 'react-player';
 import video from '../../images/Botani_Insta.mp4';
 import './About.css';
 
@@ -13,7 +12,7 @@ class About extends Component {
                     width=""
                     height="300"
                         src={video}
-                    frameborder="0">
+                    frameborder="">
                 </iframe>
                 
                 <div className="mx-5 my-5">
