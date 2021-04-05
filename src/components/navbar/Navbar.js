@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink, Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 import {auth} from '../../firebase/firebase.utils';
 import logo from '../../images/botani_logo.png';
 import CartIcon from '../cart/Cart';
@@ -62,8 +63,10 @@ const Navbar = ({currentUser}) => {
         )
     
 }
-
-export default Navbar;
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+});
+export default connect(mapStateToProps)(Navbar);
 
 /*
 <form class="d-flex">

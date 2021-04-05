@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import About from './components/about/About';
@@ -9,33 +10,27 @@ import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import SigninSignup from './components/signinSignup/SigninSignup';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
+import {setCurrentUser} from './redux/user/user.actions';
 import './App.css';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentUser: null
-    }
-  }
   unsubscribeFromAuth = null
 
   componentDidMount() {
+    const {setCurrentUser} = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot(snapShot => {
-          this.setState({
-            currentUser: {
-              id: snapShot.id,
-              ...snapShot.data()
-            }
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data()
           })
         })
       }
-      this.setState({currentUser: userAuth});
+      setCurrentUser(userAuth);
     })
   }
   componentWillUnmount() {
@@ -44,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar currentUser={this.state.currentUser} />
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/botani" component={Home}/>
@@ -53,8 +48,11 @@ class App extends Component {
           <Route exact path="/botani/products" component={Products} />
           <Route exact path="/botani/products/:name" component={ProductsDetails}/>
           <Route exact path="/botani/contact" component={Contact} />
-          <Route exact path="/botani/signin" component={SigninSignup} />
-  
+          <Route exact path="/botani/signin" render={() => this.props.currentUser ?
+            (<Redirect to='/botani/products' />) :
+            (<SigninSignup />)
+            } 
+          />
         </Switch>
         <Footer />
       </div>
@@ -63,4 +61,11 @@ class App extends Component {
   
 }
 
-export default App;
+const mapStateToProps = ({user}) => ({
+  currentUser: user.currentUser
+})
+
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+})
+export default connect(mapStateToProps, mapDispatchToProps)(App);
