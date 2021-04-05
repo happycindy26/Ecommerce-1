@@ -6,7 +6,7 @@ import Home from './components/home/Home';
 import About from './components/about/About';
 import Products from './components/products/Products';
 import ProductsDetails from './components/products/ProductsDetails';
-import Contact from './components/contact/Contact';
+//import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import SigninSignup from './components/signinSignup/SigninSignup';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
@@ -47,7 +47,7 @@ class App extends Component {
           <Route exact path="/botani/about" component={About} />
           <Route exact path="/botani/products" component={Products} />
           <Route exact path="/botani/products/:name" component={ProductsDetails}/>
-          <Route exact path="/botani/contact" component={Contact} />
+          
           <Route exact path="/botani/signin" render={() => this.props.currentUser ?
             (<Redirect to='/botani/products' />) :
             (<SigninSignup />)
@@ -69,3 +69,6 @@ const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+//<Route exact path="/botani/contact" component={Contact} />

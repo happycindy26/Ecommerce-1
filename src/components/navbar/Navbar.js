@@ -41,11 +41,7 @@ const Navbar = ({currentUser}) => {
                                 Products
                             </NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink to="/botani/contact" className="nav-link">
-                                Contact
-                            </NavLink>
-                        </li>
+                        
                     </ul>
                 </div>
                 <div>
@@ -80,4 +76,10 @@ export default connect(mapStateToProps)(Navbar);
                     <input class="form-control mx-2" type="search" placeholder="Search" aria-label="Search"/>
                     <i class="fas fa-search fa-2x" type="submit"></i>
                 </form>
+
+<li className="nav-item">
+                            <NavLink to="/botani/contact" className="nav-link">
+                                Contact
+                            </NavLink>
+                        </li>
                */
