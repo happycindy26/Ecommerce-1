@@ -3,13 +3,15 @@ import {NavLink, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {auth} from '../../firebase/firebase.utils';
 import logo from '../../images/botani_logo.png';
-import CartIcon from '../cart/Cart';
+import CartIcon from '../cart/CartIcon';
+//import CartDropdown from '../cartDropdown/CartDropdown';
 import './Navbar.css';
 
 
 const Navbar = ({currentUser}) => {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            
+            <div className="navbar navbar-expand-lg navbar-light bg-light">
                 <img className="navbar-brand" src={logo} alt="logo"/>
                 <button
                     className="navbar-toggler"
@@ -46,7 +48,7 @@ const Navbar = ({currentUser}) => {
                         </li>
                     </ul>
                 </div>
-                
+                <div>
                 {
                     currentUser ?
                     <div class="btn btn-lg nav-link" onClick={() => auth.signOut()}>
@@ -58,8 +60,13 @@ const Navbar = ({currentUser}) => {
                     </div>
                     
                 }
+                
+                </div>
                 <CartIcon />
-            </nav>
+               
+            </div>
+                
+            
         )
     
 }

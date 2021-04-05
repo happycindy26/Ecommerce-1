@@ -19,9 +19,7 @@ class ProductsDetails extends Component {
                             <h4 >${currentProduct.price}</h4>  
                             <input type="number" max="20" min="1" />
                             <div class="w-100"></div>
-                            <Link to={`./${currentProduct.name}/addtocart`} className="btn btn-primary my-5">
-                                ADD TO CART    
-                            </Link>  
+                            <button className="btn btn-outline-dark my-5">ADD TO CART </button>  
                         </div>  
                     </div>
                 <div className="row">
@@ -38,3 +36,9 @@ class ProductsDetails extends Component {
 }
 
 export default ProductsDetails;
+
+/*
+<Link to={`./${currentProduct.name}/addtocart`} className="btn btn-outline-dark my-5">
+                                ADD TO CART    
+                            </Link> 
+                            */

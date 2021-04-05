@@ -25,9 +25,8 @@ class Products extends Component {
                             
                                 <Link className="underline" to={`./products/${product.name}`} ><h6>${product.name}</h6></Link>
                                 <Link className="underline my-3" to={`./products/${product.name}`} ><h5>${product.price}</h5></Link>
-                                <Link to={`./products/${product.name}/addtocart`} className="btn btn-outline-dark mb-5">
-                                ADD TO CART    
-                                </Link> 
+                                <button className="btn btn-outline-dark my-5">ADD TO CART </button>  
+                                
                             </div>
                         ))}
                     </div>
@@ -39,5 +38,9 @@ class Products extends Component {
 
 export default Products;
 
-
+/*
+<Link to={`./products/${product.name}/addtocart`} className="btn btn-outline-dark mb-5">
+                                ADD TO CART    
+                                </Link> 
+                                */
 
