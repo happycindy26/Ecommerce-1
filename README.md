@@ -6,6 +6,7 @@
 4) click shop button, to the products page
 5) click a single product, to the product's details page
 6) click SignIn button, to SignIn / SignUp page 
+7) click home / about / products for different page
 
 
 # Getting Started with Create React App
