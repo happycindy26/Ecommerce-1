@@ -1,3 +1,14 @@
+1. React, Bootstrap, Firebase firestore (signIn/ signUp)
+2. To view the web, steps as following after clone:
+1) npm install
+2) npm start
+3) http://localhost:3000/
+4) click shop button, to the products page
+5) click a single product, to the product's details page
+6) click SignIn button, to SignIn / SignUp page 
+7) click home / about / products for different page
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
