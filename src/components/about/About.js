@@ -11,7 +11,7 @@ class About extends Component {
                 <iframe className='video mx-5'
                     width=""
                     height="300"
-                        src={video}
+                    src={video}
                     frameborder="">
                 </iframe>
                 

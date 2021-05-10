@@ -24,6 +24,11 @@ class Signup extends Component {
             alert("passwords don't match");
             return;
         }
+
+        if (password.length < 6) {
+            alert("Password should be at least 6 characters");
+            return;
+        }
         try {
             const {user} = await auth.createUserWithEmailAndPassword(email, password);
             await createUserProfileDocument(user, {displayName});

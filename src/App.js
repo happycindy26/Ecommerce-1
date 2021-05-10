@@ -70,5 +70,4 @@ const mapDispatchToProps = dispatch => ({
 })
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
-
 //<Route exact path="/botani/contact" component={Contact} />
