@@ -8,7 +8,8 @@ class Signup extends Component {
             displayName: '',
             email: '',
             password: '',
-            confirmPassword: ''
+            confirmPassword: '',
+            error: null
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,26 +21,34 @@ class Signup extends Component {
     async handleSubmit(event) {
         event.preventDefault();
         const {displayName, email, password, confirmPassword} = this.state;
-        if (password !== confirmPassword) {
-            alert("passwords don't match");
-            return;
-        }
-
-        if (password.length < 6) {
-            alert("Password should be at least 6 characters");
-            return;
-        }
         try {
-            const {user} = await auth.createUserWithEmailAndPassword(email, password);
-            await createUserProfileDocument(user, {displayName});
-            this.setState({
-                displayName: '',
-                email: '',
-                password: '',
-                confirmPassword: ''
-            })
+            if (password.length < 6) {
+                this.setState({
+                    ...this.state, 
+                    error: <p>{"Password should be at least 6 characters"}</p>
+                });
+            } else if (password !== confirmPassword) {
+                this.setState({
+                    ...this.state, 
+                    error: <p>{"Passwords don't match"}</p>
+                });
+            } else {
+                const {user} = await auth.createUserWithEmailAndPassword(email, password);
+                await createUserProfileDocument(user, {displayName});
+                this.setState({
+                    displayName: '',
+                    email: '',
+                    password: '',
+                    confirmPassword: ''
+                })
+            }
         } catch (error) {
-            console.error(error);
+            if (error.code === "auth/email-already-in-use") {
+                this.setState({
+                    ...this.state, 
+                    error: <p>{error.message}</p>
+                });
+            }
         }
     }
     render() {
@@ -68,6 +77,7 @@ class Signup extends Component {
                         <input name="confirmPassword" type="password" placeholder="Confirm Password" className="form-control" id="exampleInputConfirmPassword1"
                         value={this.state.confirmPassword} onChange={this.handleChange} />
                     </div>
+                    {this.state.error}
                     <button type="submit" className="btn btn-outline-dark px-5 mt-2">Sign Up</button>
                 </form>
             </div>
