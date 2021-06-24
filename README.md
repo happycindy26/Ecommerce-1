@@ -1,3 +1,4 @@
+live demo: https://botani--ecommerce.herokuapp.com/
 1. React, Bootstrap, Firebase firestore (signIn/ signUp)
 2. To view the web, steps as following after clone:
 1) npm install
