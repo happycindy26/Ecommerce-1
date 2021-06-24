@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {getProducts} from './ProductsData';
+import ProductsData from './ProductsData';
 import './Products.css';
 
 class Products extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            products: getProducts()
+            products: ProductsData
         };
     }
     

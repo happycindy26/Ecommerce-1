@@ -1,13 +1,21 @@
+
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {getProduct} from './ProductsData';
+import ProductsData from '../products/ProductsData';
 //import './ProductsDetails.css';
 
 class ProductsDetails extends Component {
     render() {
         const name = this.props.match.params.name;
-        const currentProduct = getProduct(name);
-    
+        let currentProduct;
+        const getProduct = (name) => {
+              currentProduct = ProductsData.find(
+              (product) => product.name.toLowerCase() === name.toLowerCase()
+              );
+              return currentProduct;
+          }
+        getProduct(name);
+  
         return (
             <div className="container">
                 <div className="ProductsDetails row justify-content-center align-items-center ">

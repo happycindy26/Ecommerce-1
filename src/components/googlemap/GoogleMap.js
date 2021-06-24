@@ -1,3 +1,4 @@
+/*
 import React, {Component} from 'react';
 import GoogleMapReact from './GoogleMapReact';
 
@@ -15,10 +16,10 @@ class GoogleMap extends Component {
    
     render() {
       return (
-        // Important! Always set the container height explicitly
+   
         <div style={{ height: '100vh', width: '100%' }}>
           <GoogleMapReact
-           // bootstrapURLKeys={{ key: '/* YOUR KEY HERE */' }}
+           
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
           >
@@ -34,3 +35,4 @@ class GoogleMap extends Component {
   }
    
   export default GoogleMap;
+  */

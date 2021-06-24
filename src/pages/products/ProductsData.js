@@ -74,11 +74,4 @@ const ProductsData = [
       }
 ]
 
-export const getProducts = () => ProductsData;
-
-export const getProduct = (name) => {
-  let currentProduct = ProductsData.find(
-    (product) => product.name.toLowerCase() === name.toLowerCase()
-    );
-    return currentProduct;
-}
+export default ProductsData;
