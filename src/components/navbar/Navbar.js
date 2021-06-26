@@ -4,13 +4,13 @@ import {connect} from 'react-redux';
 import {auth} from '../../firebase/firebase.utils';
 import logo from '../../images/botani_logo.png';
 import CartIcon from '../cart/CartIcon';
-//import CartDropdown from '../cartDropdown/CartDropdown';
+import CartDropdown from '../cartDropdown/CartDropdown';
 import './Navbar.css';
 
 
 const Navbar = ({currentUser}) => {
         return (
-            
+            <>
             <div className="navbar navbar-expand-lg navbar-light bg-light">
                 <img className="navbar-brand" src={logo} alt="logo"/>
                 <button
@@ -44,25 +44,27 @@ const Navbar = ({currentUser}) => {
                         
                     </ul>
                 </div>
-                <div>
+                <div className="navbar logCart">
                 {
                     currentUser ?
                     <div class="btn btn-lg nav-link" onClick={() => auth.signOut()}>
                     SignOut
                     </div>
                     :
-                    <div class="btn btn-lg" >
+                    <div class="btn btn-lg pr-0 pt-0" >
                     <Link to="/botani/signin" className="nav-link">SignIn</Link>
                     </div>
                     
                 }
+                <CartIcon />
                 
                 </div>
-                <CartIcon />
+                
                
             </div>
                 
-            
+                <CartDropdown />
+                </>
         )
     
 }

@@ -1,7 +1,32 @@
 .navbar-brand {
-    height: 2rem;
+  height: 2rem;
 }
 
 .navbar .nav-link {
-    color: black;
+  color: black;
+}
+
+.logCart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar-toggler {
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .navbar-brand {
+    margin-left: 3rem;
+  }
 }
