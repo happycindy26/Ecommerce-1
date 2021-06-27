@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
+
 import {auth} from '../../firebase/firebase.utils';
 import logo from '../../images/botani_logo.png';
 import CartIcon from '../cart/CartIcon';
@@ -8,7 +9,7 @@ import CartDropdown from '../cartDropdown/CartDropdown';
 import './Navbar.css';
 
 
-const Navbar = ({currentUser}) => {
+const Navbar = ({currentUser, hidden}) => {
         return (
             <>
             <div className="navbar navbar-expand-lg navbar-light bg-light">
@@ -59,17 +60,20 @@ const Navbar = ({currentUser}) => {
                 <CartIcon />
                 
                 </div>
+                {
+                    hidden ? null : <CartDropdown />
+                }
                 
-               
             </div>
                 
-                <CartDropdown />
-                </>
+            
+            </>
         )
     
 }
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => ({
+    currentUser,
+    hidden
 });
 export default connect(mapStateToProps)(Navbar);
 
