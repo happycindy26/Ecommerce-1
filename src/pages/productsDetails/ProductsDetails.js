@@ -1,6 +1,8 @@
-
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+
+import {connect} from 'react-redux';
+import {addItem} from '../../redux/cart/cart.actions';
 import ProductsData from '../products/ProductsData';
 //import './ProductsDetails.css';
 
@@ -27,7 +29,7 @@ class ProductsDetails extends Component {
                             <h4 >${currentProduct.price}</h4>  
                             <input type="number" max="20" min="1" />
                             <div class="w-100"></div>
-                            <button className="btn btn-outline-dark my-5">ADD TO CART </button>  
+                            <button onClick={() => addItem(currentProduct)} className="btn btn-outline-dark my-5">ADD TO CART </button>  
                         </div>  
                     </div>
                 <div className="row">
@@ -43,7 +45,11 @@ class ProductsDetails extends Component {
     }
 }
 
-export default ProductsDetails;
+const mapDispatchToProps = dispatch => ({
+    addItem: item => dispatch(addItem(item))
+})
+
+export default connect(null, mapDispatchToProps)(ProductsDetails);
 
 /*
 <Link to={`./${currentProduct.name}/addtocart`} className="btn btn-outline-dark my-5">
