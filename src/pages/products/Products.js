@@ -21,8 +21,8 @@ class Products extends Component {
                 <div className="container">
                     <div className="row">
                     {
-                        products.map(product => (
-                            <ProductsCollection key={product.name} name={product.name} src={product.src} price={product.price}/>
+                        products.map(item => (
+                            <ProductsCollection key={item.id} item={item}/>
                         ))
                     }
                     </div>
