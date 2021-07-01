@@ -1,11 +1,14 @@
 import React from 'react';
 import {NavLink, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
+import {createStructuredSelector} from 'reselect';
 
 import {auth} from '../../firebase/firebase.utils';
 import logo from '../../images/botani_logo.png';
 import CartIcon from '../cartIcon/CartIcon';
 import CartDropdown from '../cartDropdown/CartDropdown';
+import {selectCartHidden} from '../../redux/cart/cart.selectors';
+import {selectCurrentUser} from '../../redux/user/user.selectors';
 import './Navbar.css';
 
 
@@ -71,9 +74,9 @@ const Navbar = ({currentUser, hidden}) => {
         )
     
 }
-const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => ({
-    currentUser,
-    hidden
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser,
+    hidden: selectCartHidden
 });
 export default connect(mapStateToProps)(Navbar);
 
