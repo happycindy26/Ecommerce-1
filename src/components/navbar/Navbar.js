@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import {auth} from '../../firebase/firebase.utils';
 import logo from '../../images/botani_logo.png';
-import CartIcon from '../cart/CartIcon';
+import CartIcon from '../cartIcon/CartIcon';
 import CartDropdown from '../cartDropdown/CartDropdown';
 import './Navbar.css';
 

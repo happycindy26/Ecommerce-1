@@ -1,0 +1,12 @@
+.CartItem img {
+  width: 50%;
+}
+
+.CartItem {
+  display: flex;
+}
+
+.itemDetails {
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+}
