@@ -1,11 +1,11 @@
 .Footer {
-   background-color: #f8f9fa;
-   
+  background-color: #f8f9fa;
+  margin: auto;
 }
 
 .Footer a {
-   color: black;
+  color: black;
 }
 .Footer p {
-   font-size: small;
+  font-size: small;
 }

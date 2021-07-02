@@ -1,0 +1,21 @@
+.remove {
+  cursor: pointer;
+}
+.img {
+  width: 99%;
+}
+.item {
+  align-items: center;
+  border-bottom: 1px solid darkgray;
+}
+.arrowQuantity {
+  display: flex;
+  justify-content: center;
+}
+.arrow {
+  cursor: pointer;
+}
+
+.quantity {
+  padding: 0 1rem;
+}

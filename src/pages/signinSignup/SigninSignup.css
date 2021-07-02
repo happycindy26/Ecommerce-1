@@ -1,5 +1,7 @@
 .SigninSignup {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 75vh;
+  margin-top: 2rem;
 }
