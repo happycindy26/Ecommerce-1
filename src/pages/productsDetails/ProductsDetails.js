@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 
 import ProductsCollectionDetails from '../../components/productsCollectionDetails/ProductsCollectionDetails';
-import ProductsData from '../products/ProductsData';
-//import './ProductsDetails.css';
+import ProductsData from '../../redux/products/productsData';
+
 
 class ProductsDetails extends Component {
     render() {
@@ -23,12 +22,5 @@ class ProductsDetails extends Component {
     }
 }
 
-
-
 export default ProductsDetails;
 
-/*
-<Link to={`./${currentProduct.name}/addtocart`} className="btn btn-outline-dark my-5">
-                                ADD TO CART    
-                            </Link> 
-                            */

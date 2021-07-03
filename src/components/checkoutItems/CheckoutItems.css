@@ -2,11 +2,16 @@
   cursor: pointer;
 }
 .img {
-  width: 99%;
+  width: 15vw;
 }
 .item {
+  text-align: center;
   align-items: center;
   border-bottom: 1px solid darkgray;
+}
+.item .itemName {
+  text-decoration: none;
+  color: black;
 }
 .arrowQuantity {
   display: flex;
@@ -17,5 +22,5 @@
 }
 
 .quantity {
-  padding: 0 1rem;
+  padding: 0 0.8rem;
 }

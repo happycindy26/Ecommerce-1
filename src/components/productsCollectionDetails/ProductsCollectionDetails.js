@@ -27,6 +27,6 @@ const ProductsCollectionDetails = ({currentProduct, addItem}) => (
             </div>
 )
 const mapDispatchToProps = dispatch => ({
-    addItem: item => dispatch(addItem(item))
+    addItem: currentProduct => dispatch(addItem(currentProduct))
 })
 export default connect(null, mapDispatchToProps)(ProductsCollectionDetails);

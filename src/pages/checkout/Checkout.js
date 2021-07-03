@@ -8,7 +8,7 @@ import './Checkout.css';
 const Checkout = ({cartItems, total}) => (
     <>
     <div class="container checkout mt-5">
-        <div class="row header">
+        <div class="row description">
             <div class="col">Remove</div>
             <div class="col">Product</div>
             <div class="col">Name</div>

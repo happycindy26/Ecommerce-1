@@ -1,6 +1,6 @@
 import oliveSerum from '../../images/OliveSkinSerum_Box.jpg';
 import acaiSerum from '../../images/AcaiBerrySerum_Box.jpg';
-import phytoBodywash from "../../images/PhytoBodyWash.jpg";
+import oliveCreamCleanser from "../../images/OliveSoothingCreamCleanserBox.jpg";
 import boostBalancing from '../../images/BoostBalancingBox_100.jpg';
 import coconutOil from '../../images/CoconutGlowBodyHairOil.jpg'
 import healingLipBalm from '../../images/Healing_Lip_Balm.jpg';
@@ -27,8 +27,8 @@ const ProductsData = [
       },
       {
         id: 3,
-        name: "PhytoBodyWash",
-        src: phytoBodywash,
+        name: "Olive Cream Cleanser",
+        src: oliveCreamCleanser,
         price: 45,
         description: "Only natural foaming and cleansing agents have been used in developing Botani’s PhytoBody Wash, which is also completely free from harsh chemicals and sulphates. Contains key plant extracts such as Aloe Vera, Chamomile, Calendula and Olive Leaf Extract. This nourishing and refreshing body wash will leave your skin feeling squeaky clean, soft and smooth.",
         ingredients: "Aqua, Sodium Cocoyl Glutamate, Glycerin, Coco-Glucoside (and) Glyceryl Oleate, Coco-Betaine, Cyamopsis Tetragonoloba (Guar) Gum, Coco-Glucoside, Hydrolyzed Soy Protein"

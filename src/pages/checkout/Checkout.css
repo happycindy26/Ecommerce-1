@@ -1,14 +1,16 @@
-.header {
+.description {
+  display: flex;
+  flex-wrap: nowrap;
   padding-bottom: 2rem;
   border-bottom: 1px solid darkgray;
-}
-.col {
+  font-size: 0.9rem;
   text-align: center;
 }
+
 .total {
   text-align: end;
   font-size: 2rem;
-  margin: 2rem;
+  margin: 2rem auto;
 }
 .checkout {
   min-height: 75vh;
