@@ -9,28 +9,29 @@ import StripeButton from '../../components/stripeButton/StripeButton';
 import './Checkout.css';
 
 const Checkout = ({ cartItems, total }) => (
-  <>
-  <div class="checkout">
-        <Row class="item">
-            <Col>Remove</Col>
-            <Col>Product</Col>
-            <Col>Name</Col>
-            <Col>Quantity</Col>
-            <Col>Price</Col>
+
+    <>
+    <div class="checkout">
+        <ul className="item">
+            <li>Remove</li>
+            <li>Product</li>
+            <li>Name</li>
+            <li>Quantity</li>
+            <li>Price</li>
+        </ul>
+        <Row>
+            {cartItems.map(cartItem =>
+                (<CheckoutItems key={cartItem.id} cartItem={cartItem} />))
+            }
         </Row>
-            <Row>
-                {cartItems.map(cartItem =>
-                    (<CheckoutItems key={cartItem.id} cartItem={cartItem} />))
-                }
-            </Row>
-            <div class="total">Total: ${total}</div>
-      </div>
-        <div className="text-center mb-5">
-            <p>*Please use the following test credit card for payments*</p>
-            <p>4242 4242 4242 4242 - Exp: 07/21 -CVV: 123</p>
-            <p>Please use current Month/Year for Exp</p>
-            <StripeButton price={total} />
-        </div>
+        <div class="total">Total: ${total}</div>
+    </div>
+    <div className="text-center mb-5">
+        <p>*Please use the following test credit card for payments*</p>
+        <p>4242 4242 4242 4242 - Exp: 07/21 -CVV: 123</p>
+        <p>Please use current Month/Year for Exp</p>
+        <StripeButton price={total} />
+    </div>
     </>
 )
 const mapStateToProps = createStructuredSelector({
