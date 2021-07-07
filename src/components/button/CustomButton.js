@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+/*import React from 'react';
 
 const CustomButton = ({children, ...otherProps}) => {
     <button className="btn btn-primary" {...otherProps}>
@@ -7,3 +7,4 @@ const CustomButton = ({children, ...otherProps}) => {
 }
 
 export default CustomButton;
+*/

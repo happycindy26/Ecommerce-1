@@ -1,6 +1,5 @@
 import ProductsData from './productsData';
 
-
 const INITIAL_STATE = {
     productsData: ProductsData
 }

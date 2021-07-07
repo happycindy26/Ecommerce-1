@@ -1,24 +1,23 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
+import {Button, Col, Card} from 'react-bootstrap';
 import {addItem} from '../../redux/cart/cart.actions';
-
 import './ProductsCollection.css';
-
 
 const ProductsCollection = ({item, addItem}) => {
     const {id, name, src, price} = item;
     return(
-        <>
-        {
-        <div className="Product col-md-6 col-lg-4 text-center" key={id} >
-            <Link to={`./products/${name}`}><img src={src} alt={name}/></Link>
-            <Link className="underline" to={`./products/${name}`} ><h6>{name}</h6></Link>
-            <Link className="underline" to={`./products/${name}`} ><h6>${price}</h6></Link>
-            <button onClick={()=> addItem(item)} className="btn btn-outline-dark my-5">ADD TO CART </button>  
-        </div>
-        }
-        </> 
+        <Col md={6} lg={4} className="product" key={id} >
+            <Card className="text-center my-3">
+                <Link to={`products/${name}`}><Card.Img variant="top" src={src} alt={name}/></Link> 
+                <Card.Body>
+                    <Link to={`products/${name}`} className="navLink"> <Card.Title>{name}</Card.Title></Link> 
+                    <Link to={`products/${name}`} className="navLink"><Card.Text>${price}</Card.Text></Link> 
+                    <Button onClick={() => addItem(item)} variant="outline-success mt-3">ADD TO CART</Button>
+                </Card.Body>
+            </Card>
+        </Col>
     )           
 }
 

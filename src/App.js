@@ -3,7 +3,7 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
 
-import Navbar from './components/navbar/Navbar';
+import Header from './components/header/Header';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Products from './pages/products/Products';
@@ -13,9 +13,10 @@ import Footer from './components/footer/Footer';
 import SigninSignup from './pages/signinSignup/SigninSignup';
 import Checkout from './pages/checkout/Checkout';
 
-import {auth, createUserProfileDocument} from './firebase/firebase.utils';
+import {auth, createUserProfileDocument/*, addCollectionAndDocuments*/} from './firebase/firebase.utils';
 import {setCurrentUser} from './redux/user/user.actions';
 import {selectCurrentUser} from './redux/user/user.selectors';
+//import {selectProductsItems} from './redux/products/products.selectors';
 import './App.css';
 
 
@@ -23,7 +24,7 @@ class App extends Component {
   unsubscribeFromAuth = null
 
   componentDidMount() {
-    const {setCurrentUser} = this.props;
+    const {setCurrentUser /*productsData */} = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
@@ -36,6 +37,7 @@ class App extends Component {
         })
       }
       setCurrentUser(userAuth);
+      //addCollectionAndDocuments("products", productsData);
     })
   }
   componentWillUnmount() {
@@ -44,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Header />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/botani" component={Home}/>
@@ -64,11 +66,11 @@ class App extends Component {
       </div>
     );
   }
-  
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  //productsData: selectProductsItems
 })
 
 const mapDispatchToProps = dispatch => ({

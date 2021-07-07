@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-
 import ProductsCollectionDetails from '../../components/productsCollectionDetails/ProductsCollectionDetails';
 import ProductsData from '../../redux/products/productsData';
-
 
 class ProductsDetails extends Component {
     render() {

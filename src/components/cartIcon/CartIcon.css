@@ -3,9 +3,8 @@
   height: 45px;
   position: relative;
   display: flex;
-  /* align-items: center; */
   margin-top: 0.7rem;
-  margin-right: 0.8rem;
+  margin-left: 1.5rem;
   justify-content: center;
   cursor: pointer;
 }

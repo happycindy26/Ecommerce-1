@@ -1,22 +1,19 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
+import {Card, Button} from 'react-bootstrap';
 import './Home.css';
 import homeImg from '../../images/pexels.jpg';
 
-class Home extends Component {
-    render() {
-        return (
-            <div class="card text-black text-left">
-                <img src={homeImg} class="card-img" alt="skin care"/>
-                <div class="card-img-overlay ml-2 mt-5">
-                    <h3 className="">Organic, Vegan Skincare Products Australia</h3>
-                    <NavLink to="/botani/products">
-                        <button type="button" className="btn btn-success my-4">SHOP NOW</button>
-                    </NavLink>
-                </div>
-            </div>
-        )
-    }
-}
-
+const Home = () => (
+    <Card className="text-black">
+        <Card.Img className="card-img" src={homeImg} alt="img"/>
+        <Card.ImgOverlay>
+            <Card.Title className="mt-5">Organic, Vegan Skincare Products Australia</Card.Title>
+                <NavLink to="/botani/products" >
+                    <Button variant="success mt-3">SHOP NOW</Button>
+                </NavLink>
+        </Card.ImgOverlay>
+    </Card>
+)
+  
 export default Home;

@@ -1,0 +1,24 @@
+.header {
+  background-color: #f8f9fa;
+}
+.logo {
+  height: 2rem;
+}
+.navLink:hover,
+.navLink:visited,
+.navLink:link,
+.navLink:active {
+  color: black;
+  text-decoration: none;
+}
+.toggle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .logo {
+    display: none;
+  }
+}
