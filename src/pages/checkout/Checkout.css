@@ -1,18 +1,16 @@
-.description {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid darkgray;
-  font-size: 0.9rem;
-  text-align: center;
-}
+
 .total {
   text-align: end;
   font-size: 2rem;
   margin: 2rem auto;
 }
+.item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
 .checkout {
   min-height: 75vh;
-  display: flex;
-  flex-direction: column;
 }

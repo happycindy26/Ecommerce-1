@@ -8,7 +8,7 @@ import './ProductsCollection.css';
 const ProductsCollection = ({item, addItem}) => {
     const {id, name, src, price} = item;
     return(
-        <Col md={6} lg={4} className="product" key={id} >
+        <Col xs={12} md={6} lg={4} className="product" key={id} >
             <Card className="text-center my-3">
                 <Link to={`products/${name}`}><Card.Img variant="top" src={src} alt={name}/></Link> 
                 <Card.Body>

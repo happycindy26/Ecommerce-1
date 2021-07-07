@@ -3,16 +3,13 @@
 }
 .img {
   width: 15vw;
+  object-fit: cover;
 }
 .item {
   text-align: center;
   align-items: center;
   border-bottom: 1px solid darkgray;
 }
-/* .item .itemName {
-  text-decoration: none;
-  color: black;
-} */
 .arrowQuantity {
   display: flex;
   justify-content: center;
@@ -20,6 +17,4 @@
 .arrow {
   cursor: pointer;
 }
-/* .quantity {
-  padding: 0 0.8rem;
-} */
+
