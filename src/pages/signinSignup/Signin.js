@@ -39,17 +39,16 @@ class Signin extends Component {
     render() {
         return (
             <div className="my-4 mx-3">
-                <h5>I already have an account</h5>
-                <span>Sign In</span>
+                <h5>I already have an account -- Sign In</h5>
                 <form onSubmit={this.handleSubmit}>
                     <div className="my-4">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
-                        <input name="email" type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        <label htmlFor="exampleInputEmail1" className="form-label"></label>
+                        <input name="email" type="email" placeholder="Name" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                             value={this.state.email} onChange={this.handleChange} required/>
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                        <input name="password" type="password" className="form-control" id="exampleInputPassword1"
+                        <label htmlFor="exampleInputPassword1" className="form-label"></label>
+                        <input name="password" type="password" placeholder="Password" className="form-control" id="exampleInputPassword1"
                         value={this.state.password} onChange={this.handleChange} />
                     </div>
                     {this.state.error}
