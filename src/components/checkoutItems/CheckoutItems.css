@@ -1,5 +1,6 @@
 .remove {
   cursor: pointer;
+  padding-left: 2rem;
 }
 .img {
   width: 15vw;
@@ -8,7 +9,11 @@
 .item {
   text-align: center;
   align-items: center;
+  padding-right: 0rem;
   border-bottom: 1px solid darkgray;
+}
+.nav-link {
+  color: black;
 }
 .arrowQuantity {
   display: flex;

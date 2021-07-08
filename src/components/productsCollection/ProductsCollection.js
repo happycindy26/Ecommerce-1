@@ -12,8 +12,8 @@ const ProductsCollection = ({item, addItem}) => {
             <Card className="text-center my-3">
                 <Link to={`products/${name}`}><Card.Img variant="top" src={src} alt={name}/></Link> 
                 <Card.Body>
-                    <Link to={`products/${name}`} className="navLink"> <Card.Title>{name}</Card.Title></Link> 
-                    <Link to={`products/${name}`} className="navLink"><Card.Text>${price}</Card.Text></Link> 
+                    <Link to={`products/${name}`} className="nav-link"> <Card.Title>{name}</Card.Title></Link> 
+                    <Link to={`products/${name}`} className="nav-link"><Card.Text>${price}</Card.Text></Link> 
                     <Button onClick={() => addItem(item)} variant="outline-success mt-3">ADD TO CART</Button>
                 </Card.Body>
             </Card>

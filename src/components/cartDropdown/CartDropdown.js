@@ -23,7 +23,7 @@ const CartDropdown = ({cartItems, history, dispatch}) => (
             }
             </Row>
         </Container>
-        <Button variant="outline-primary mt-3" onClick={() => {  
+        <Button variant="outline-success mt-3" onClick={() => {  
             history.push('/botani/checkout');
             dispatch(toggleCartHidden());
             }}

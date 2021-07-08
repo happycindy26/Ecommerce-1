@@ -12,12 +12,12 @@ const CheckoutItems = ({cartItem, removeItem, addItem, decreaseItem}) => {
         <Row className="item">
             <Col className="remove" onClick={() => removeItem(cartItem)} >&#10060;</Col>
             <Col>
-                <Link to={`./products/${name}`}>
+                <Link className="" to={`./products/${name}`}>
                     <img className="img" src={src} alt="pic"/>
                 </Link>
             </Col>
             <Col>
-                <Link className="navLink" to={`./products/${name}`}>{name}</Link>
+                <Link className="nav-link" to={`./products/${name}`}>{name}</Link>
             </Col>
             <Col className="arrowQuantity">
                 <div onClick={() => decreaseItem(cartItem)} className="arrow">&#10094;</div>

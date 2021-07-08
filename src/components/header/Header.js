@@ -14,30 +14,30 @@ import './Header.css';
 const Header = ({currentUser, hidden}) => (
     
     <Navbar className="header">
-        <Container>
+       
             <Navbar.Brand href="#home"><img className="logo" src={logo} alt="logo"/></Navbar.Brand>
             <Nav className="me-auto navName">
-                <NavLink to="/botani/home" className="navLink">Home</NavLink>
-                <NavLink to="/botani/about" className="navLink mx-3">About</NavLink>
-                <NavLink to="/botani/products" className="navLink">Products</NavLink>
+                <NavLink to="/botani/home" className="nav-link">Home</NavLink>
+                <NavLink to="/botani/about" className="nav-link mx-3">About</NavLink>
+                <NavLink to="/botani/products" className="nav-link">Products</NavLink>
             </Nav>
-            <div className="navbar">
+            <Nav className="signCart">
                 {
                 currentUser ?
-                <div class="" onClick={() => auth.signOut()}>
+                <NavLink to="" class="nav-link" onClick={() => auth.signOut()}>
                 SignOut
-                </div>
+                </NavLink>
                 :
                 <div className="" >
-                <Link to="/botani/signin" className="navLink">SignIn</Link>
+                <NavLink to="/botani/signin" className="nav-link">SignIn</NavLink>
                 </div> 
                 }
                 <CartIcon />
-            </div>
+            </Nav>
             {
                 hidden ? null : <CartDropdown />
             }
-        </Container>
+   
     </Navbar>    
 );
 
