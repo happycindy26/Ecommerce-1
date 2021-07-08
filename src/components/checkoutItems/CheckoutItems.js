@@ -35,19 +35,3 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(null,mapDispatchToProps)(CheckoutItems);
-/*
-<div className="row item">
-            <div className="col remove" onClick={() => removeItem(cartItem)} >&#10060;</div>
-            <Link className="col"  to={`./products/${name}`}>
-                <img className="img" src={src} alt="pic"/>
-            </Link>
-            <Link className="col itemName" to={`./products/${name}`}>
-                <div>{name}</div>
-            </Link>
-            <div className="col arrowQuantity">
-                <div onClick={() => decreaseItem(cartItem)} className="arrow">&#10094;</div>
-                    <span className="quantity">{quantity}</span>
-                <div onClick={() => addItem(cartItem)} className="arrow">&#10095;</div>
-            </div>
-            <div className="col">${price}</div>
-        </div>*/

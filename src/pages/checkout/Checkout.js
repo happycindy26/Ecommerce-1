@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selectors';
 import CheckoutItems from '../../components/checkoutItems/CheckoutItems';
@@ -9,7 +9,6 @@ import StripeButton from '../../components/stripeButton/StripeButton';
 import './Checkout.css';
 
 const Checkout = ({ cartItems, total }) => (
-
     <>
     <div class="checkout">
         <ul className="item">

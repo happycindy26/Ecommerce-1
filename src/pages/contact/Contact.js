@@ -1,6 +1,6 @@
 /*
 import React from 'react';
-//import GoogleMap from '../googlemap/GoogleMap';
+
 import './Contact.css';
 
 const Contact = () => {

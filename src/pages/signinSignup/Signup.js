@@ -58,7 +58,7 @@ class Signup extends Component {
                 
                 <form onSubmit={this.handleSubmit}>
                     <div className="my-2">
-                        <label htmlFor="exampleInputEmail1" className="form-label"></label>
+                        <label htmlFor="exampleInputName1" className="form-label"></label>
                         <input name="displayName" type="text" placeholder="Name" className="form-control" id="exampleInput" 
                             value={this.state.displayName} onChange={this.handleChange} required/>
                     </div>
@@ -69,7 +69,7 @@ class Signup extends Component {
                     </div>
                     <div className="my-2">
                         <label htmlFor="exampleInputPassword1" className="form-label"></label>
-                        <input name="password" type="password" Placeholder="Password" className="form-control" id="exampleInputPassword1"
+                        <input name="password" type="password" placeholder="Password" className="form-control" id="exampleInputPassword1"
                         value={this.state.password} onChange={this.handleChange} />
                     </div>
                     <div className="my-2">
