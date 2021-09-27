@@ -23,12 +23,3 @@ const About = () => (
 );
 
 export default About;
-/*
-<ReactPlayer 
-playsInline
-poster=""
-src={video}
-fluid={false}
-width={480}
-height={272} />
-*/
